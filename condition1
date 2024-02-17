@@ -1,0 +1,198 @@
+Q1 Take 2 integers input and print the greatest of them.
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          int a;
+          cout<<"Enter 1st Number : ";
+          cin>>a;
+          int b;
+          cout<<"Enter 2nd NUmber : ";
+          cin>>b;
+          if(a>b) cout<<a;
+          else cout<<b;
+      }
+OUTPUT -  Enter 1st Number : 8
+          Enter 2nd NUmber : 3
+          8
+          Enter 1st Number : 85
+          Enter 2nd NUmber : 97
+          97
+  Q2 Given the radius of the circle, predict whether numerically the area of this circle is larger than the circumference or not.
+  Ans - #include<iostream>
+        using namespace std;
+        int main(){
+            int r;
+            cout<<"Enter radius : ";
+            cin>>r;
+            float c = 2*3.141592*r;
+            float a = 3.141592*r*r;
+            if(a>c) cout<<"Area > Circumference";
+            else if(a<c) cout<<"Area < Circumference";
+            else cout<<"Area = Circumference"; 
+        }
+OUTPUT - Enter radius : 4
+         Area > Circumference
+         Enter radius : 2
+         Area = Circumference
+         Enter radius : 1
+         Area < Circumference
+  Q3 Any year is input through the keyboard. Write a program to determine whether the year is a leap year or not. (Considering leap year occurs after every 4 years)
+  Ans - #include<iostream>
+        using namespace std;
+        int main(){
+            int y;
+            cout<<"Enter year : ";
+            cin>>y;
+        
+            if(y%400==0) cout<<"leap year";
+            else if(y%100==0) cout<<"Not a leap year";
+            else if(y%4==0) cout<<"leap year";
+            else cout<<"Not a leap year";
+        }
+OUTPUT - Enter year : 1976
+         leap year
+         Enter year : 2003
+         Not a leap year
+Q4 Given the length and breadth of a rectangle, write a program to find whether numerically the area of the rectangle is greater than its perimeter.
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          int l;
+          cout<<"Enter length : ";
+          cin>>l;
+          int b;
+          cout<<"Enter breadth : ";
+          cin>>b;
+          int a = l*b;
+          int p = 2*(l+b);
+          if(a>p) cout<<"Area > Perimeter";
+          else if(a<p) cout<<"Area < Perimeter";
+          else cout<<"Area = Perimeter";
+      }
+output -  Enter length : 5
+          Enter breadth : 6
+          Area > Perimeter
+          Enter length : 10
+          Enter breadth : 2
+          Area < Perimeter
+          Enter length : 4
+          Enter breadth : 4
+          Area = Perimeter
+Q5 Write a program to input sides of a triangle and check whether a triangle is equilateral, scalene or isosceles triangle.
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          int a;
+          cout<<"Enter 1st side : ";
+          cin>>a;
+          int b;
+          cout<<"Enter 2nd side : ";
+          cin>>b;
+          int c;
+          cout<<"Enter 3rd side : ";
+          cin>>c;
+          if(a==b && a==c) cout<<"Equilateral";
+          else if(a==b || a==c || b==c) cout<<"Isosceles";
+          else cout<<"Scalene";
+      }
+OUTPUT -  Enter 1st side : 2
+          Enter 2nd side : 3
+          Enter 3rd side : 4
+          Scalene
+          Enter 1st side : 3
+          Enter 2nd side : 3
+          Enter 3rd side : 3
+          Equilateral
+          Enter 1st side : 5 
+          Enter 2nd side : 5
+          Enter 3rd side : 4
+          Isosceles
+Q6 If the marks of A, B and C are input through the keyboard, write a program to determine the student scoring the least marks.
+Ans - #include<iostream>
+using namespace std;
+int main(){
+    int a;
+    cout<<"Enter 1st student marks : ";
+    cin>>a;
+    int b;
+    cout<<"Enter 2nd student marks : ";
+    cin>>b;
+    int c;
+    cout<<"Enter 3rd student marks : ";
+    cin>>c;
+    if(a<=b && a<=c) cout<<a;
+    else if(b<=a || b<=c) cout<<b;
+    else cout<<c;
+}
+OUTPUT -  Enter 1st student marks : 21
+          Enter 2nd student marks : 32 
+          Enter 3rd student marks : 54 
+          21 
+Q7 Given a point (x, y), write a program to find out if it lies on the x-axis, y-axis or at the origin, viz. (0, 0).
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          int x;
+          cout<<"Enter x coordinates : ";
+          cin>>x;
+          int y;
+          cout<<"Enter y coordinates : ";
+          cin>>y;
+      
+          if(x==0 && y==0) cout<<"Origin";
+          else if(x==0) cout<<"Y-Axis";
+          else if(y==0) cout<<"X-Axis";
+          else cout<<Quadrants;
+      }
+OUTPUT -  Enter x coordinates : 0
+          Enter y coordinates : 2      
+          Y-Axis
+          Enter x coordinates : 6
+          Enter y coordinates : 0      
+          X-Axis
+Q8 Given three points (x1, y1), (x2, y2) and (x3, y3), write a program to check if all the three points fall on one straight line.
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          int x1,y1,x2,y2,x3,y3;
+          cout<<"Enter 1st point : ";
+          cin>>x1>>y1;
+          cout<<"Enter 2nd point : ";
+          cin>>x2>>y2;
+          cout<<"Enter 3rd point : ";
+          cin>>x3>>y3;
+          float m1 = (y2-y1)/(x2-x1); // AB
+          float m2 = (y3-y2)/(x3-x2); //BC
+          if(m1==m2) cout<<"Collinear";
+          else cout<<"No Collinear";
+      }
+OUTPUT -  Enter 1st point :  1 2
+          Enter 2nd point :  2 4
+          Enter 3rd point :  3 6
+          Collinear
+          Enter 1st point :  1 2 
+          Enter 2nd point :  2 4 
+          Enter 3rd point :  3 5
+          No Collinear
+Q9 Write a C++ program to input any character and check whether it is the alphabet, digit or special character.
+Ans - #include<iostream>
+      using namespace std;
+      int main(){
+          char ch;
+          cout<<"Enter a character : ";
+          cin>>ch;
+          int x = (int)ch;
+          if(x>=97 && x<=122) cout<<"Small Alphabet";
+          else if(x>=65 && x<=90) cout<<"Capital Alphabet";
+          else if(x>=48 && x<=57) cout<<"Digit";
+          else cout<<"Special Character";
+      }
+OUTPUT -  Enter a character : h
+          Small Alphabet
+          Enter a character : F
+          Capital Alphabet
+          Enter a character : 5
+          Digit
+          Enter a character : !
+          Special Character
+
