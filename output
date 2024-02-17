@@ -7,8 +7,10 @@ int main() {
     b = 300;
     c = 200;
     cout << "value of b and c are respectively " << b << " and " << c;
-    return 0;
+    return 0;d001d9">
 }
 output - value of b and c are respectively 300 and 200value of b and c are respectively
 
+
+<img width="889" alt="Screenshot 2024-02-17 184427" src="https://github.com/NishantDwivedi0052/assignment-3-condition1/assets/159905788/634ed62e-bb42-4176-b825-bbf527d001d9">
 
